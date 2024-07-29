@@ -20,9 +20,9 @@ def calculate_and_print_interval(interval_number):
 
     print('[Interval #' + str(interval_number) + '] ' + interval_start_hours + ':' + interval_start_minutes + ' - ' + interval_stop_hours + ':' + interval_stop_minutes)
 
-    # Зададим начало следующего интервала
+    # Set the beginning of the next interval
     interval_start_hours = int(interval_stop_hours)
-    interval_start_minutes = int(interval_stop_minutes) + 17 # смещение 17 минут
+    interval_start_minutes = int(interval_stop_minutes) + 17 # offset of 17 minutes
     if interval_start_minutes > 59:
         interval_start_hours = int(interval_start_hours) + 1
         interval_start_minutes -= 60
